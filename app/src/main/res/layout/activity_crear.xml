@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BCAAA4">
+
+    <TextView android:id="@+id/tv_cuenta_nueva"
+        android:text="@string/new_account"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#212121"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout android:id="@+id/l_name"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_cuenta_nueva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView android:text="@string/tv_name"
+            android:textSize="20sp"
+            android:textColor="#311B92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/et_names"
+            android:maxLines="1"
+            android:digits=" abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚüÜ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/l_ap"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/l_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView android:text="@string/tv_ap"
+            android:textSize="20sp"
+            android:textColor="#311B92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/et_apellido_paterno"
+            android:maxLines="1"
+            android:digits=" abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚüÜ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/l_am"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/l_ap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView android:text="@string/tv_am"
+            android:textSize="20sp"
+            android:textColor="#311B92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/et_apellido_materno"
+            android:maxLines="1"
+            android:digits=" abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚüÜ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/l_edad_sexo"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/l_am"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:weightSum="3"
+            android:gravity="center">
+
+            <TextView android:text="@string/edad"
+                android:textSize="20sp"
+                android:textColor="#311B92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <EditText android:id="@+id/et_edad"
+                android:inputType="number"
+                android:maxLength="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:weightSum="3"
+            android:layout_marginTop="7dp">
+
+            <TextView android:text="@string/sexo"
+                android:textSize="20sp"
+                android:textColor="#311B92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <Spinner android:id="@+id/spinner_sexo"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/l_correo"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/l_edad_sexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView android:text="@string/correo"
+            android:textSize="20sp"
+            android:textColor="#311B92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/et_correo"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/l_user"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/l_correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView android:text="@string/usuario"
+            android:textSize="20sp"
+            android:textColor="#311B92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/et_user"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/l_password"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/l_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView android:text="@string/password"
+            android:textSize="20sp"
+            android:textColor="#311B92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/et_password"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button android:text="@string/btn_guardar"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:layout_below="@+id/l_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#607D8B"/>
+
+</RelativeLayout>
