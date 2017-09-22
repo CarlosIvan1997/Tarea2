@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SteamApp</string>
+    <string name="select_options">SELECCIONE UNA OPCION</string>
+    <string name="btn_crear">crear cuenta</string>
+    <string name="btn_buscar">buscar usuario</string>
+    <string name="btn_update">actualizar datos</string>
+    <string name="btn_delete">eliminar cuenta</string>
+</resources>
